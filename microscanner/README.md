@@ -9,7 +9,7 @@ Aqua Security's MicroScanner lets you check your container images for vulnerabil
 
 ## Usage
 
-```json
+```hcl
 action "aqua microscanner" {
   uses = "aquasecurity/aqua-actions/microscanner@master"
   secrets = ["MICROSCANNER_TOKEN"]
