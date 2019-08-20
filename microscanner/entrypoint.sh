@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-cat << EOT >> Dockerfile
+sudo cat << EOT >> Dockerfile
 FROM ${IMAGE}
 
 ADD https://get.aquasec.com/microscanner /
@@ -9,4 +9,4 @@ RUN /microscanner ${MICROSCANNER_TOKEB}
 RUN echo "No vulnerabilities!"
 EOT
 
-sh -c "docker build $* --build-arg image="${IMAGE}" --no-cache ."
+sudo sh -c "docker build $* --build-arg image="${IMAGE}" --no-cache ."
