@@ -1,11 +1,11 @@
 #!/bin/sh -l
 
 cat << EOT >> Dockerfile
-FROM ${image}
+FROM ${IMAGE}
 
 ADD https://get.aquasec.com/microscanner /
 RUN chmod +x /microscanner
-RUN /microscanner ${token}
+RUN /microscanner ${MICROSCANNER_TOKEB}
 RUN echo "No vulnerabilities!"
 EOT
 
