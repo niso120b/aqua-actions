@@ -1,14 +1,13 @@
 #!/bin/sh -l
 
 echo "Starting..."
-echo "${IMAGE}"
 
 sudo cat << EOT >> Dockerfile
-FROM nginx
+FROM ${IMAGE}
 
 ADD https://get.aquasec.com/microscanner /
 RUN chmod +x /microscanner
-RUN /microscanner 123456
+RUN /microscanner ${MICROSCANNER_TOKEN}
 RUN echo "No vulnerabilities!"
 EOT
 
