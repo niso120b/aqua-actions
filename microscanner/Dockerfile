@@ -11,9 +11,9 @@ LABEL "com.github.actions.icon"="package"
 LABEL "com.github.actions.color"="blue"
 COPY README.md /
 
-RUN apk update \
-  && (apk info | xargs -n1 -I{} apk --quiet add {}-doc); true \
-  && rm -rf /var/cache/apk/*
+# RUN apk update \
+#  && (apk info | xargs -n1 -I{} apk --quiet add {}-doc); true \
+#  && rm -rf /var/cache/apk/*
 
 COPY entrypoint.sh /entrypoint.sh
 
