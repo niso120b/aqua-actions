@@ -1,4 +1,5 @@
 FROM docker:stable
+USER root
 
 LABEL "name"="Aqua MicroScanner Action"
 LABEL "maintainer"="Aqua Security <support@aquasec.com>"
