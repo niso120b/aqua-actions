@@ -1,11 +1,11 @@
-workflow "Build and Publish" {
+workflow "New workflow" {
   on = "push"
-  resolves = "Release"
+  resolves = ["Aqua MicroScanner Action for Docker Scanning"]
 }
 
-action "aqua microscanner" {
-  uses = "niso120b/aqua-actions/microscanner@master"
-  secrets = ["MICROSCANNER_TOKEN"]
+action "Aqua MicroScanner Action for Docker Scanning" {
+  uses = "./microscanner"
+  secrets = ["GITHUB_TOKEN", "MICROSCANNER_TOKEN"]
   args = "--build-arg token=${MICROSCANNER_TOKEN}"
   env = {
     IMAGE = "nginx"
