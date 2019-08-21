@@ -1,5 +1,4 @@
 FROM docker:stable
-USER root
 
 LABEL "name"="Aqua MicroScanner Action"
 LABEL "maintainer"="Aqua Security <support@aquasec.com>"
@@ -8,7 +7,7 @@ LABEL "version"="1.0.0"
 LABEL "com.github.actions.name"="Aqua MicroScanner Action for Docker Scanning"
 LABEL "com.github.actions.description"="Aqua Security's MicroScanner lets you check your container images for vulnerabilities"
 LABEL "com.github.actions.icon"="package"
-LABEL "com.github.actions.color"="blue"
+LABEL "com.github.actions.color"="yellow"
 COPY README.md /
 
 # RUN apk update \
