@@ -8,8 +8,8 @@ action "Aqua MicroScanner Action for Docker Scanning" {
   secrets = [
     "MICROSCANNER_TOKEN",
   ]
-  args = "--build-arg token=${MICROSCANNER_TOKEN}"
+  args = "build --build-arg token=${MICROSCANNER_TOKEN}"
   env = {
-    IMAGE = "nginx"
+    IMAGE = "nginx:latest"
   }
 }
