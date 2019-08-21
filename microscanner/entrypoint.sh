@@ -1,7 +1,7 @@
 #!/bin/sh
-#set -e
+set -e
 
-#echo "Starting..."
+echo "Starting..."
 
 #touch Dockerfile
 #cat >> "Dockerfile" <<-EOF
@@ -14,3 +14,4 @@
 #EOF
 
 # sh -c "docker build $* --build-arg image="${IMAGE}" --no-cache ."
+sh -c "docker build $* ."
