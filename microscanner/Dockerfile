@@ -16,4 +16,4 @@ COPY README.md /
 
 COPY entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+CMD [ "bash entrypoint.sh" ]
