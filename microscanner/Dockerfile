@@ -16,4 +16,6 @@ COPY README.md /
 
 COPY entrypoint.sh /entrypoint.sh
 
-CMD [ "bash entrypoint.sh" ]
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT [ "/entrypoint.sh" ]
